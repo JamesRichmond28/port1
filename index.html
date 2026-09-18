@@ -4,115 +4,319 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Richmond Abban | Portfolio</title>
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+  
   <link rel="stylesheet" href="assets/css/style.css" />
 </head>
 <body>
 
-  <!-- Navigation -->
+  <!-- 1. Welcome Splash Overlay -->
+  <div id="welcome-screen">
+    <div class="welcome-icons">
+      <div class="icon-circle">&lt;/&gt;</div>
+      <div class="icon-circle">👤</div>
+      <div class="icon-circle">⚡</div>
+    </div>
+    <h1 class="welcome-title">Welcome To My<br><span class="gradient-text">Portfolio Website</span></h1>
+    <div class="welcome-link">🌐 richmondabban.dev</div>
+  </div>
+
+  <!-- Ambient Glowing Backdrop Orbs -->
+  <div class="glow-orb orb-purple"></div>
+  <div class="glow-orb orb-cyan"></div>
+
+  <!-- Navigation Bar -->
   <header>
     <nav>
-      <a href="#hero" class="logo">Richmond.</a>
-      <ul>
+      <a href="#home" class="logo">Richmond<span class="dot">.</span></a>
+      
+      <!-- Desktop Navigation Menu -->
+      <ul class="nav-links">
+        <li><a href="#home" class="active">Home</a></li>
         <li><a href="#about">About</a></li>
-        <li><a href="#skills">Skills</a></li>
-        <li><a href="#projects">Projects</a></li>
+        <li><a href="#portfolio">Portfolio</a></li>
         <li><a href="#contact">Contact</a></li>
       </ul>
+
+      <!-- Hamburger Button (Mobile / Tablet) -->
+      <button id="hamburger-btn" class="hamburger" aria-label="Toggle navigation menu">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </button>
     </nav>
   </header>
 
+  <!-- Mobile Drawer Menu -->
+  <div id="mobile-menu" class="mobile-drawer">
+    <ul class="mobile-nav-links">
+      <li><a href="#home" class="mobile-link">Home</a></li>
+      <li><a href="#about" class="mobile-link">About</a></li>
+      <li><a href="#portfolio" class="mobile-link">Portfolio</a></li>
+      <li><a href="#contact" class="mobile-link">Contact</a></li>
+    </ul>
+    <div class="mobile-drawer-footer">
+      <a href="mailto:richmondabban@gmail.com" class="btn btn-primary" style="width: 100%; justify-content: center;">Get in Touch</a>
+    </div>
+  </div>
+
   <main>
-    <!-- Hero / Intro -->
-    <section id="hero">
-      <h1>Hi, I'm <span class="highlight">Richmond Abban</span>.</h1>
-      <p>Building data-driven solutions, web experiences, and robust digital systems.</p>
-      <a href="#projects" class="btn">View My Work</a>
-    </section>
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+      <div class="hero-content">
+        <div class="badge">🚀 Ready to Innovate</div>
+        <h1 class="hero-title">
+          <span id="typewriter-text"></span><span class="cursor">|</span>
+        </h1>
+        <p class="hero-tagline">Building scalable data models, database systems, and modern digital experiences.</p>
 
-    <!-- About Section -->
-    <section id="about">
-      <h2>About Me</h2>
-      <p>
-        I'm a developer passionate about transforming complex data into clear, scalable applications. 
-        Whether analyzing datasets, optimizing database queries, or crafting responsive interfaces, 
-        I focus on writing clean, efficient, and purposeful code.
-      </p>
-    </section>
-
-    <!-- Skills Section with Badges -->
-    <section id="skills">
-      <h2>Technical Skills</h2>
-      <div class="skills-grid">
-        
-        <div class="skill-category">
-          <h3>Languages</h3>
-          <div class="pill-list">
-            <span class="skill-pill">Python</span>
-            <span class="skill-pill">SQL</span>
-            <span class="skill-pill">JavaScript</span>
-            <span class="skill-pill">HTML5 / CSS3</span>
-          </div>
+        <div class="hero-tech-pills">
+          <span>Python</span>
+          <span>SQL</span>
+          <span>JavaScript</span>
+          <span>Node.js</span>
+          <span>PostgreSQL</span>
         </div>
 
-        <div class="skill-category">
-          <h3>Frameworks & Libraries</h3>
-          <div class="pill-list">
-            <span class="skill-pill">Pandas</span>
-            <span class="skill-pill">NumPy</span>
-            <span class="skill-pill">Scikit-Learn</span>
-            <span class="skill-pill">Express</span>
-          </div>
+        <div class="hero-actions">
+          <a href="#portfolio" class="btn btn-primary">Projects ↗</a>
+          <a href="#contact" class="btn btn-glass">Contact ✉</a>
         </div>
 
-        <div class="skill-category">
-          <h3>Databases & Tools</h3>
-          <div class="pill-list">
-            <span class="skill-pill">PostgreSQL</span>
-            <span class="skill-pill">MySQL</span>
-            <span class="skill-pill">Git & GitHub</span>
-            <span class="skill-pill">VS Code</span>
-          </div>
+        <!-- Social Icons -->
+        <div class="hero-socials">
+          <a href="https://github.com" target="_blank" class="social-icon-btn" title="GitHub">🐙</a>
+          <a href="https://linkedin.com" target="_blank" class="social-icon-btn" title="LinkedIn">💼</a>
+          <a href="mailto:richmondabban@gmail.com" class="social-icon-btn" title="Email">✉️</a>
         </div>
+      </div>
 
+      <!-- Hero Visual Art Card -->
+      <div class="hero-art">
+        <div class="glass-card hero-preview-card">
+          <div class="window-header">
+            <span></span><span></span><span></span>
+            <span class="window-title">developer.config.json</span>
+          </div>
+          <pre><code>{
+  "name": "Richmond Abban",
+  "role": "Data Analyst & Dev",
+  "status": "Ready to build",
+  "coffee": "∞"
+}</code></pre>
+        </div>
       </div>
     </section>
 
-    <!-- Projects Section -->
-    <section id="projects">
-      <h2>Featured Projects</h2>
-      <div class="projects-grid">
+    <!-- About Section -->
+    <section id="about" class="about">
+      <div class="section-center-head">
+        <h2>About Me</h2>
+        <p class="subtitle">✦ Transforming complex ideas into digital experiences ✦</p>
+      </div>
 
-        <div class="project-card">
-          <h3>Credit Risk Assessment Model</h3>
-          <p>A machine learning project predicting borrower default probability using regression techniques and feature engineering.</p>
-          <div class="pill-list" style="margin-bottom: 1.25rem;">
-            <span class="skill-pill">Python</span>
-            <span class="skill-pill">Pandas</span>
-            <span class="skill-pill">Scikit-Learn</span>
+      <div class="about-grid">
+        <div class="about-text glass-card">
+          <h3>Hello, I'm <span class="gradient-text">Richmond Abban</span></h3>
+          <p>
+            I focus on developing scalable data systems and high-performance software. 
+            From designing normalized database architectures to training predictive machine learning models, 
+            I prioritize clean, robust solutions.
+          </p>
+          <div class="about-actions">
+            <a href="mailto:richmondabban@gmail.com" class="btn btn-primary">Download CV ⤓</a>
+            <a href="#portfolio" class="btn btn-outline">View Projects ↗</a>
           </div>
-          <a href="#" class="btn card-btn">View Repository</a>
         </div>
 
-        <div class="project-card">
-          <h3>Database Management Portal</h3>
-          <p>Relational schema design and normalized database implementation to handle transaction integrity and high-performance querying.</p>
-          <div class="pill-list" style="margin-bottom: 1.25rem;">
-            <span class="skill-pill">SQL</span>
-            <span class="skill-pill">PostgreSQL</span>
-            <span class="skill-pill">Database Design</span>
+        <div class="about-avatar-card glass-card">
+          <div class="avatar-placeholder">👤</div>
+        </div>
+      </div>
+
+      <!-- Metrics Row -->
+      <div class="stats-row">
+        <div class="stat-card glass-card">
+          <span class="stat-icon">&lt;/&gt;</span>
+          <div>
+            <div class="stat-number">11</div>
+            <div class="stat-label">Total Projects</div>
           </div>
-          <a href="#" class="btn card-btn">View Repository</a>
+        </div>
+        <div class="stat-card glass-card">
+          <span class="stat-icon">🎓</span>
+          <div>
+            <div class="stat-number">7</div>
+            <div class="stat-label">Certificates</div>
+          </div>
+        </div>
+        <div class="stat-card glass-card">
+          <span class="stat-icon">⏱</span>
+          <div>
+            <div class="stat-number">3+</div>
+            <div class="stat-label">Years Experience</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Portfolio Showcase (Projects / Certificates / Tech Stack) -->
+    <section id="portfolio" class="portfolio">
+      <div class="section-center-head">
+        <h2>Portfolio Showcase</h2>
+        <p class="subtitle">Explore my journey through projects, certifications, and technical expertise.</p>
+      </div>
+
+      <!-- Tab Buttons -->
+      <div class="tab-control-wrap">
+        <div class="tab-controls glass-card">
+          <button class="tab-btn active" data-tab="tab-projects">&lt;/&gt; Projects</button>
+          <button class="tab-btn" data-tab="tab-certs">🎓 Certificates</button>
+          <button class="tab-btn" data-tab="tab-tech">🛠 Tech Stack</button>
+        </div>
+      </div>
+
+      <!-- Tab 1: Projects -->
+      <div id="tab-projects" class="tab-content active">
+        <div class="showcase-grid">
+          
+          <div class="project-card glass-card">
+            <div class="project-cover grad-1"></div>
+            <div class="project-body">
+              <h3>Credit Risk Assessment Model</h3>
+              <p>Predictive analysis model calculating borrower default likelihood using regression algorithms and feature engineering.</p>
+              <div class="card-footer">
+                <a href="#" class="link-cyan">Live Demo ↗</a>
+                <button class="btn-mini open-modal-btn" 
+                  data-title="Credit Risk Assessment Model" 
+                  data-desc="A machine learning model predicting borrower default probabilities. Evaluates credit scores, debt-to-income ratios, and financial metrics." 
+                  data-tech="Python, Pandas, Scikit-Learn, PostgreSQL">Details →</button>
+              </div>
+            </div>
+          </div>
+
+          <div class="project-card glass-card">
+            <div class="project-cover grad-2"></div>
+            <div class="project-body">
+              <h3>Database Management Portal</h3>
+              <p>Relational database architecture designed for transaction integrity, normalized tables, and query optimization.</p>
+              <div class="card-footer">
+                <a href="#" class="link-cyan">Live Demo ↗</a>
+                <button class="btn-mini open-modal-btn" 
+                  data-title="Database Management Portal" 
+                  data-desc="High-performance backend database structure with indexed tables and security constraints." 
+                  data-tech="SQL, PostgreSQL, Express, Node.js">Details →</button>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- Tab 2: Certificates -->
+      <div id="tab-certs" class="tab-content">
+        <div class="cert-grid">
+          <div class="cert-card glass-card">
+            <div class="cert-badge">🏅 Verified</div>
+            <h4>Data Science & Analytics Specialization</h4>
+            <p>Comprehensive training covering data cleaning, statistical evaluation, and modeling.</p>
+          </div>
+          <div class="cert-card glass-card">
+            <div class="cert-badge">🏅 Verified</div>
+            <h4>Relational Databases & SQL Specialization</h4>
+            <p>Advanced SQL querying, schema optimization, and entity-relationship design.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Tab 3: Tech Stack -->
+      <div id="tab-tech" class="tab-content">
+        <div class="tech-grid">
+          <div class="tech-box glass-card"><span>🐍</span> Python</div>
+          <div class="tech-box glass-card"><span>🗄️</span> SQL</div>
+          <div class="tech-box glass-card"><span>⚡</span> JavaScript</div>
+          <div class="tech-box glass-card"><span>🌐</span> HTML5 / CSS3</div>
+          <div class="tech-box glass-card"><span>🐘</span> PostgreSQL</div>
+          <div class="tech-box glass-card"><span>📊</span> Pandas / NumPy</div>
+          <div class="tech-box glass-card"><span>🌱</span> Git / GitHub</div>
+          <div class="tech-box glass-card"><span>⚙️</span> VS Code</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact & Guestbook Section -->
+    <section id="contact" class="contact">
+      <div class="section-center-head">
+        <h2>Contact Me</h2>
+        <p class="subtitle">Got a question? Send me a message, or leave a public comment.</p>
+      </div>
+
+      <div class="contact-split">
+        <!-- Message Form -->
+        <div class="glass-card contact-panel">
+          <h3>Get in Touch</h3>
+          <p class="panel-sub">Have something to discuss? Send a message and let's talk.</p>
+          <form id="contact-form">
+            <div class="form-group">
+              <input type="text" placeholder="Your Name" required />
+            </div>
+            <div class="form-group">
+              <input type="email" placeholder="Your Email" required />
+            </div>
+            <div class="form-group">
+              <textarea rows="4" placeholder="Your Message" required></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary send-btn">✈ Send Message</button>
+          </form>
         </div>
 
+        <!-- Guestbook / Comments -->
+        <div class="glass-card contact-panel">
+          <h3>Comments (<span id="comment-count">1</span>)</h3>
+          <p class="panel-sub">Leave a comment on my portfolio.</p>
+          
+          <form id="comment-form">
+            <div class="form-group">
+              <input type="text" id="comment-name" placeholder="Enter your name" required />
+            </div>
+            <div class="form-group">
+              <textarea id="comment-text" rows="2" placeholder="Write your message here..." required></textarea>
+            </div>
+            <button type="submit" class="btn btn-glass submit-comment-btn">📌 Post Comment</button>
+          </form>
+
+          <div id="comment-feed" class="comment-feed">
+            <div class="comment-item">
+              <div class="comment-avatar">💬</div>
+              <div>
+                <strong>Alex K.</strong>
+                <p>Clean design and smooth transitions!</p>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </section>
   </main>
 
-  <!-- Footer / Contact -->
-  <footer id="contact">
-    <h2>Get In Touch</h2>
-    <p>Feel free to reach out for collaborations, questions, or opportunities.</p>
-    <a href="mailto:richmondabban204@gmail.com" class="email-link">richmondabban204@gmail.com</a>
+  <!-- Project Details Modal -->
+  <div id="details-modal" class="modal-backdrop">
+    <div class="glass-card modal-box">
+      <button id="modal-close" class="modal-close">&times;</button>
+      <h3 id="modal-title">Project Details</h3>
+      <p id="modal-desc"></p>
+      <div class="modal-tech-wrap">
+        <strong>Technologies:</strong>
+        <div id="modal-tech" class="hero-tech-pills" style="margin-top: 0.5rem;"></div>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    <p>© 2026 Richmond Abban •</p>
   </footer>
 
   <script src="assets/js/main.js"></script>
